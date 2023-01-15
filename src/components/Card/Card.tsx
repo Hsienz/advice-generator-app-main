@@ -4,7 +4,7 @@ import patternDividerDesktop from "../../assets/images/pattern-divider-desktop.s
 import patternDividerMobile from "../../assets/images/pattern-divider-mobile.svg"
 const Card = () => {
 	const handleOnClick = () => {
-		fetch("https://api.adviceslip.com/advice", { method: "GET" })
+		fetch("https://api.adviceslip.com/advice", { method: "GET", cache: 'no-cache' } )
 			.then((res) => res.json())
 			.then((res) => {
 				let el = document.getElementById("id") as HTMLElement;
